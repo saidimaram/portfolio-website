@@ -1,24 +1,25 @@
 import { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import silvaryPinkWallpaper from './Layers/silvary_pink.jpg'
-import maramProfileImage from './Layers/MaramS.JPG'
-import maramResume from './Layers/MaramSaidi Resume CV.pdf'
-import eduBoostVideoUrl from './Layers/Eduboost/Eduboost Chatbot.mp4'
-import docSmartVideo from './Layers/Docsmart/Activité _ saidi Maram _ LinkedIn - Google Chrome 2026-10-22 22-47-45.mp4'
-import winterSchoolCertificate from './Layers/participation certification .png'
-import awsTrainingBadge from './Layers/AWS TrainingBadge.PNG'
-import rexProjectManagerImage from './Layers/SagemCom/my project project manager.png'
-import rexAddProjectImage from './Layers/SagemCom/add project.png'
-import rexAdminIssueImage from './Layers/SagemCom/issue for admin.png'
-import rexJenkinsImage from './Layers/SagemCom/jenkins front result.png'
-import rexSonarQubeImage from './Layers/SagemCom/sonarQube result.png'
-import bookingCaptureImage from './Layers/booking/Capture.PNG'
-import bookingCapture2Image from './Layers/booking/Capture2.PNG'
-import recouvraImage1 from './Layers/Recouvra/Recouvra1.png'
-import recouvraImage2 from './Layers/Recouvra/Recouvra2.png'
-import recouvraImage3 from './Layers/Recouvra/Recouvra3.png'
-import recouvraImage4 from './Layers/Recouvra/Recouvra4.png'
-import recouvraImage5 from './Layers/Recouvra/Recouvra5.png'
+
+const silvaryPinkWallpaper = '/silvary_pink.jpg'
+const maramProfileImage = '/pics/MaramSSS.png'
+const maramResume = '/MaramSaidi Resume CV.pdf'
+const eduBoostVideoUrl = '/videos/Eduboost/Eduboost Chatbot.mp4'
+const docSmartVideo = '/videos/Docsmart/Activité _ saidi Maram _ LinkedIn - Google Chrome 2026-10-22 22-47-45.mp4'
+const winterSchoolCertificate = '/participation certification .png'
+const awsTrainingBadge = '/AWS TrainingBadge.PNG'
+const rexProjectManagerImage = '/pics/SagemCom/my project project manager.png'
+const rexAddProjectImage = '/pics/SagemCom/add project.png'
+const rexAdminIssueImage = '/pics/SagemCom/issue for admin.png'
+const rexJenkinsImage = '/pics/SagemCom/jenkins front result.png'
+const rexSonarQubeImage = '/pics/SagemCom/sonarQube result.png'
+const bookingCaptureImage = '/pics/booking/Capture.PNG'
+const bookingCapture2Image = '/pics/booking/Capture2.PNG'
+const recouvraImage1 = '/pics/Recouvra/Recouvra1.png'
+const recouvraImage2 = '/pics/Recouvra/Recouvra2.png'
+const recouvraImage3 = '/pics/Recouvra/Recouvra3.png'
+const recouvraImage4 = '/pics/Recouvra/Recouvra4.png'
+const recouvraImage5 = '/pics/Recouvra/Recouvra5.png'
 
 function IcGrid() {
   return (
@@ -430,12 +431,12 @@ function Card({
 
 function SectionLabel({ label }: { label: string }) {
   return (
-    <div className="flex items-center gap-4 mb-8">
-      <div className="rule-l flex-1" />
+    <div className="mb-8 flex flex-wrap items-center gap-3 sm:gap-4">
+      <div className="rule-l flex-1 min-w-[18px]" />
       <h2 className="editorial-section-label uppercase">
         {label}
       </h2>
-      <div className="rule-r flex-1" />
+      <div className="rule-r flex-1 min-w-[18px]" />
     </div>
   )
 }
@@ -728,7 +729,7 @@ function About() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
             { value: '4', label: 'Internships', sub: 'Real-company experience' },
-            { value: '3', label: 'Featured Projects', sub: 'Production delivered' },
+            { value: '3', label: 'Featured Projects', sub: '' },
             { value: 'AWS', label: 'AI Cert', sub: 'In progress' },
             { value: '4', label: 'Languages', sub: ' (3 Spoken fluently)' },
           ].map((m, i) => (

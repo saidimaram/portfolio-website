@@ -120,7 +120,8 @@ section[id] {
   letter-spacing: 0.28em;
   line-height: 1;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
 .editorial-section-label::before,
 .editorial-section-label::after {
@@ -128,6 +129,14 @@ section[id] {
   font-size: 0.6rem;
   color: #4a2730;
   letter-spacing: 0;
+}
+
+@media (max-width: 640px) {
+  .editorial-section-label {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -303,13 +312,19 @@ section[id] {
 }
 
 /* Wine sidebar + top bar */
-.sidebar-wine,
-.topbar-wine {
+.sidebar-wine {
   background: linear-gradient(170deg, var(--color-wine-mid), var(--color-wine) 40%, var(--color-wine-deep));
   position: relative;
 }
 .topbar-wine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(170deg, var(--color-wine-mid), var(--color-wine) 40%, var(--color-wine-deep));
   border-bottom: 1px solid rgba(226, 181, 160, 0.35);
+  box-shadow: 0 10px 24px rgba(74, 20, 28, 0.14);
+  backdrop-filter: blur(8px);
 }
 .sidebar-monogram {
   width: 64px;
